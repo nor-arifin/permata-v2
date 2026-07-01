@@ -1,0 +1,5 @@
+{
+    "php.inlayHints.parameters.byReference": true,
+    "php.inlayHints.parameters.enabled": false,
+    "php.inlayHints.types.suppressVariableFromLiteral": false
+}

@@ -1,0 +1,12 @@
+/labklin/laravel/vendor
+/labklin/laravel/node_modules
+/labklin/laravel/.env
+/labklin/laravel/storage/logs/*
+/labklin/laravel/storage/framework/cache/data/*
+/labklin/laravel/storage/framework/sessions/*
+/labklin/laravel/storage/framework/views/*
+/labklin/laravel/storage/debugbar/*
+/labklin/laravel/bootstrap/cache/*
+.DS_Store
+*.zip
+/logs/

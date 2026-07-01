@@ -1,0 +1,9 @@
+
+git remote add origin git@github.com:nor-arifin/clinic-lite.git
+
+PUSH
+git commit -m “Add Doctor”
+git remote add origin git@github.com:nor-arifin/clinic-lite.git
+git push origin main
+atau
+git push origin master
