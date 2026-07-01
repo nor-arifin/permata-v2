@@ -75,8 +75,8 @@
                                                 </td>
                                                 <td>
                                                     <div class="d-flex justify-content-center">
-                                                        <a href='{{ route('print.consent', $consent->id) }}'
-                                                            class="btn btn-sm btn-primary btn-icon">
+                                                        <a href='{{ route('print.consent', $consent->id) }}' target="_blank"
+                                                             class="btn btn-sm btn-primary btn-icon">
                                                             <i class="fas fa-print"></i>
                                                         </a>
                                                         <button class="btn btn-sm btn-danger btn-icon confirm-delete ml-2"

@@ -108,8 +108,8 @@
                         <p>Please select paper header !</p>
                     </div>
                     <div class="modal-footer bg-whitesmoke br">
-                        <a href="{{ route('kesmas.print', $data->id) }}" class="btn btn-primary">Lab Paper</a>
-                        <a href="{{ route('kesmas.printkan', $data->id) }}" class="btn btn-primary">KAN Paper</a>
+                        <a href="{{ route('kesmas.print', $data->id) }}" target="_blank" class="btn btn-primary">Lab Paper</a>
+                        <a href="{{ route('kesmas.printkan', $data->id) }}" target="_blank" class="btn btn-primary">KAN Paper</a>
                     </div>
                 </div>
             </div>

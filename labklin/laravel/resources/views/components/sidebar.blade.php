@@ -165,6 +165,9 @@
                     <li>
                         <a class=" nav-link" href="{{ route('config') }}">Reset Config Environment</a>
                     </li>
+                    <li class='{{ $submenu === 'notification' ? 'active' : '' }}'>
+                        <a class="nav-link" href="{{ route('notification.setting') }}">Notification</a>
+                    </li>
                 </ul>
             </li>
             <li class=" nav-item dropdown {{ $menu === 'master' ? 'active' : '' }}"> <a href="#"

@@ -96,8 +96,8 @@
                                                     class="fas fa-syringe"></i>
                                             </button>
                                             @endif
-                                            <a href="{{ route('print.label', $lab->service_visit_registration_id) }}"
-                                                class="btn btn-sm btn-info btn-icon ml-2" title="Print Barcode"><i
+                                             <a href="{{ route('print.label', $lab->service_visit_registration_id) }}" target="_blank"
+                                                 class="btn btn-sm btn-info btn-icon ml-2" title="Print Barcode"><i
                                                     class="fas fa-barcode"></i></a>
                                         </td>
                                     </tr>

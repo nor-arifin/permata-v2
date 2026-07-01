@@ -87,7 +87,7 @@
                                                                         <i class="fas fa-cash-register"></i>
                                                                     </a>
                                                                 @endif
-                                                                <a href='{{ route('print.receipt', $unpaid->id) }}'
+                                                                <a href='{{ route('print.receipt', $unpaid->id) }}' target="_blank"
                                                                     data-toggle="tooltip" data-placement="top"
                                                                     title="Print Receipt" class="btn btn-sm btn-info">
                                                                     <i class="fas fa-print"></i>
@@ -133,7 +133,7 @@
                                                             </td>
                                                             <td>{{ date('d-m-Y', strtotime($paid->visit_payment_time))}}</td>
                                                             <td>
-                                                                <a href='{{ route('print.receipt', $paid->id) }}'
+                                                                <a href='{{ route('print.receipt', $paid->id) }}' target="_blank"
                                                                     data-toggle="tooltip" data-placement="top"
                                                                     title="Print Receipt" class="btn btn-sm btn-info">
                                                                     <i class="fas fa-print"></i>

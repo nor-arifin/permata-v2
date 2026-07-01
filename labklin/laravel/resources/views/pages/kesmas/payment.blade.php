@@ -93,7 +93,7 @@
                                                                         <i class="fas fa-cash-register"></i>
                                                                     </a>
                                                                 @endif
-                                                                <a href='{{ route('print.receiptkm', $unpaid->id) }}'
+                                                                <a href='{{ route('print.receiptkm', $unpaid->id) }}' target="_blank"
                                                                     data-toggle="tooltip" data-placement="top"
                                                                     title="Print Receipt" class="btn btn-sm btn-info">
                                                                     <i class="fas fa-print"></i>
@@ -138,7 +138,7 @@
                                                             </td>
                                                             <td>{{ date('d-m-Y', strtotime($paid->order_payment_date))}}</td>
                                                             <td>
-                                                                <a href='{{ route('print.receiptkm', $paid->id) }}'
+                                                                <a href='{{ route('print.receiptkm', $paid->id) }}' target="_blank"
                                                                     data-toggle="tooltip" data-placement="top"
                                                                     title="Print Receipt" class="btn btn-sm btn-info">
                                                                     <i class="fas fa-print"></i>
@@ -189,11 +189,11 @@
                                                                         <i class="fas fa-cash-register"></i>
                                                                     </a>
                                                                 @endif
-                                                                <a href='{{ route('print.receiptpks', $pks->id) }}'
-                                                                    data-toggle="tooltip" data-placement="top"
-                                                                    title="Print Receipt" class="btn btn-sm btn-info">
-                                                                    <i class="fas fa-print"></i>
-                                                                </a>
+                                                                 <a href='{{ route('print.receiptpks', $pks->id) }}' target="_blank"
+                                                                     data-toggle="tooltip" data-placement="top"
+                                                                     title="Print Receipt" class="btn btn-sm btn-info">
+                                                                     <i class="fas fa-print"></i>
+                                                                 </a>
                                                             </td>
                                                         </tr>
                                                     @endforeach

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Visit;
 use App\Models\Service;
+use App\Services\FonnteService;
 use App\Models\Laboratory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -1737,30 +1738,7 @@ Mohon segera dilakukan validasi melalui LabKlin Systems.
 
 *Terima Kasih*
 _Pesan ini dibuat otomatis oleh sistem_";
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://api.fonnte.com/send',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => array(
-                'target' => $target,
-                'message' => $message,
-            ),
-            CURLOPT_HTTPHEADER => array(
-                'Authorization: ' . env('FONNTE_API_TOKEN')
-            ),
-        ));
-
-        $response = curl_exec($curl);
-
-        curl_close($curl);
-        // echo $response; //log response fonnte
+        FonnteService::send($target, $message);
     }
 
     //update result
@@ -1918,30 +1896,7 @@ layanan@labkesmas-kalteng.id
 Terima kasih telah menggunakan layanan Laboratorium Kesehatan dan Kalibrasi Provinsi Kalimantan Tengah.
 
 _Pesan ini dibuat otomatis oleh sistem_";
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://api.fonnte.com/send',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => array(
-                'target' => $target,
-                'message' => $message,
-            ),
-            CURLOPT_HTTPHEADER => array(
-                'Authorization: ' . env('FONNTE_API_TOKEN')
-            ),
-        ));
-
-        $response = curl_exec($curl);
-
-        curl_close($curl);
-        // echo $response; //log response fonnte
+        FonnteService::send($target, $message);
     }
     function sendResult($regno)
     {
@@ -1982,29 +1937,7 @@ layanan@labkesmas-kalteng.id
 Terima kasih telah menggunakan layanan Laboratorium Kesehatan dan Kalibrasi Provinsi Kalimantan Tengah.
 
 _Pesan ini dibuat otomatis oleh sistem_";
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://api.fonnte.com/send',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => array(
-                'target' => $target,
-                'message' => $message,
-            ),
-            CURLOPT_HTTPHEADER => array(
-                'Authorization: ' . env('FONNTE_API_TOKEN')
-            ),
-        ));
-
-        $response = curl_exec($curl);
-
-        curl_close($curl);
+        FonnteService::send($target, $message);
 
         return redirect()->route('validation')->with('success', 'Notification Sent to Patient');
     }

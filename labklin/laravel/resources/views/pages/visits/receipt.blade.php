@@ -151,8 +151,6 @@ if ($visit->visit_payment_officer != null) {
         Fpdf::AddPage();
     }
     $yttd = Fpdf::GetY();
-    Fpdf::Image('template/stamp.png', 125, $yttd - 5, -190);
-    Fpdf::Image('template/ttd_bendahara.png', 160, $yttd + 8, -190);
 
     fpdf::SetFont('Arial', '', 10);
     fpdf::Cell(50, 6, 'Palangka Raya, ' . date('d - m - Y', strtotime($visit->visit_payment_time)), 0, 1, 'C');
@@ -163,10 +161,7 @@ if ($visit->visit_payment_officer != null) {
     fpdf::Cell(190, 15, '', 0, 1, 'L');
     fpdf::Cell(140, 6, '', 0, 0, 'L');
     fpdf::SetFont('Arial', 'B', 10);
-    fpdf::Cell(50, 6, 'Fransiska R., SKM', 0, 1, 'C');
-    fpdf::Cell(140, 6, '', 0, 0, 'L');
-    fpdf::SetFont('Arial', '', 10);
-    fpdf::Cell(50, 6, 'NIP. 19820929 200604 2 026', 0, 1, 'C');
+    fpdf::Cell(50, 6, auth()->user()->name, 0, 1, 'C');
 }
 
 $named = $visit->visit_patient_name;

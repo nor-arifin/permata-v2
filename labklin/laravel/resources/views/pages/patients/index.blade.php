@@ -115,8 +115,8 @@
                                                                                         class="btn btn-sm btn-warning btn-icon">
                                                                                         <i class="fas fa-edit"></i>
                                                                                     </a>
-                                                                                    <a href='{{ route('print.record', $patient->patient_mr) }}'
-                                                                                        class="btn btn-sm btn-primary btn-icon ml-2">
+                                                                                     <a href='{{ route('print.record', $patient->patient_mr) }}' target="_blank"
+                                                                                         class="btn btn-sm btn-primary btn-icon ml-2">
                                                                                         <i class="fas fa-credit-card"></i>
                                                                                     </a>
                                                                                     <button class="btn btn-sm btn-danger btn-icon confirm-delete ml-2"

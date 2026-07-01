@@ -33,6 +33,7 @@ use App\Http\Controllers\ExcelExportController;
 use App\Http\Controllers\ExcelImportController;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\DoctorScheduleController;
+use App\Http\Controllers\NotificationSettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -96,6 +97,10 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('locations', LocationController::class);
     //LOCATIONS
     Route::resource('organizations', OrganizationController::class);
+    //NOTIFICATION SETTING
+    Route::get('/notification/setting', [NotificationSettingController::class, 'edit'])->name('notification.setting');
+    Route::put('/notification/setting', [NotificationSettingController::class, 'update'])->name('notification.setting.update');
+    Route::get('/notification/test', [NotificationSettingController::class, 'test'])->name('notification.setting.test');
     //CONSENTS
     Route::resource('consents', ConsentController::class);
     //VISITS

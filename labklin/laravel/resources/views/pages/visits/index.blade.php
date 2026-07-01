@@ -116,12 +116,12 @@
                                                             </a>
                                                             {{-- END VIEW RESUME --}}
                                                             @if($visit->visit_payment_status == 'paid')
-                                                                <a href='{{ route('print.receipt', $visit->id) }}' data-toggle="tooltip"
-                                                                    data-placement="top" title="Print Receipt"
-                                                                    class="btn btn-sm btn-info btn-icon ml-2">
-                                                                    <i class="fa fa-print"></i>
-                                                                </a>
-                                                            @elseif($visit->visit_payment_status == 'unpaid')
+                                                                <a href='{{ route('print.receipt', $visit->id) }}' target="_blank" data-toggle="tooltip"
+                                                                     data-placement="top" title="Print Receipt"
+                                                                     class="btn btn-sm btn-info btn-icon ml-2">
+                                                                     <i class="fa fa-print"></i>
+                                                                 </a>
+                                                             @elseif($visit->visit_payment_status == 'unpaid')
                                                                 <a href='{{ route('visits.services', $visit->id) }}'
                                                                     data-toggle="tooltip" data-placement="top" title="Add New Service"
                                                                     class="btn btn-sm btn-success btn-icon ml-2">
@@ -137,13 +137,13 @@
                                                             </a>
                                                             {{-- END VIEW RESUME --}}
                                                             @if($visit->visit_payment_status == 'paid')
-                                                                <a href='{{ route('print.receipt', $visit->id) }}' data-toggle="tooltip"
-                                                                    data-placement="top" title="Print Receipt"
-                                                                    class="btn btn-sm btn-info btn-icon ml-2">
-                                                                    <i class="fa fa-print"></i>
-                                                                </a>
-                                                            @endif
-                                                        @elseif($visit->visit_status_timeline == 'Reporting')
+                                                                 <a href='{{ route('print.receipt', $visit->id) }}' target="_blank" data-toggle="tooltip"
+                                                                     data-placement="top" title="Print Receipt"
+                                                                     class="btn btn-sm btn-info btn-icon ml-2">
+                                                                     <i class="fa fa-print"></i>
+                                                                 </a>
+                                                             @endif
+                                                         @elseif($visit->visit_status_timeline == 'Reporting')
                                                             {{-- VIEW RESUME --}}
                                                             <a href='{{ route('visits.resume', $visit->visit_registration_id) }}'
                                                                 data-toggle="tooltip" data-placement="top" title="Visit Summary"
@@ -152,13 +152,13 @@
                                                             </a>
                                                             {{-- END VIEW RESUME --}}
                                                             @if($visit->visit_payment_status == 'paid')
-                                                                <a href='{{ route('print.receipt', $visit->id) }}' data-toggle="tooltip"
-                                                                    data-placement="top" title="Print Receipt"
-                                                                    class="btn btn-sm btn-info btn-icon ml-2">
-                                                                    <i class="fa fa-print"></i>
-                                                                </a>
-                                                            @endif
-                                                        @elseif($visit->visit_status_timeline == 'Finished')
+                                                                 <a href='{{ route('print.receipt', $visit->id) }}' target="_blank" data-toggle="tooltip"
+                                                                     data-placement="top" title="Print Receipt"
+                                                                     class="btn btn-sm btn-info btn-icon ml-2">
+                                                                     <i class="fa fa-print"></i>
+                                                                 </a>
+                                                             @endif
+                                                         @elseif($visit->visit_status_timeline == 'Finished')
                                                             {{-- VIEW RESUME --}}
                                                             <a href='{{ route('visits.resume', $visit->visit_registration_id) }}'
                                                                 data-toggle="tooltip" data-placement="top" title="Visit Summary"
@@ -167,7 +167,7 @@
                                                             </a>
                                                             {{-- END VIEW RESUME --}}
                                                             @if($visit->visit_payment_status == 'paid')
-                                                                <a href='{{ route('print.receipt', $visit->id) }}' data-toggle="tooltip"
+                                                                <a href='{{ route('print.receipt', $visit->id) }}' target="_blank" data-toggle="tooltip"
                                                                     data-placement="top" title="Print Receipt"
                                                                     class="btn btn-sm btn-info btn-icon ml-2">
                                                                     <i class="fa fa-print"></i>

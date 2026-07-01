@@ -81,7 +81,7 @@
                                                 @else
                                                     <td><span class="badge badge-error">Not Found</span></td>
                                                     <td style="white-space: nowrap;">
-                                                        <a href='{{ route('generator.napza', $item->service_visit_registration_id) }}'
+                                                        <a href='{{ route('generator.napza', $item->service_visit_registration_id) }}' target="_blank"
                                                             data-toggle="tooltip" data-placement="top" title="View Resume"
                                                             class="btn btn-sm btn-info btn-icon ml-2">
                                                             <i class="fa fa-search"></i>

@@ -105,15 +105,15 @@
                                                                                             <i class="fa fa-eye"></i>
                                                                                         </a>
                                                                                     @elseif($lab->visit_status_timeline == 'Finished')
-                                                                                        <a href='{{ route('print.labreport', $lab->service_visit_registration_id) }}'
-                                                                                            data-toggle="tooltip" data-placement="top" title="Print Result"
-                                                                                            class="btn btn-sm btn-primary btn-icon ml-2">
-                                                                                            <i class="fa fa-print"></i>
-                                                                                        </a>
-                                                                                    @elseif($lab->visit_status_timeline == 'Reporting')
-                                                                                        <a href='{{ route('print.labreport', $lab->service_visit_registration_id) }}'
-                                                                                            data-toggle="tooltip" data-placement="top" title="Print Result"
-                                                                                            target="_blank" class="btn btn-sm btn-primary btn-icon ml-2">
+                                                                                         <a href='{{ route('print.labreport', $lab->service_visit_registration_id) }}' target="_blank"
+                                                                                             data-toggle="tooltip" data-placement="top" title="Print Result"
+                                                                                             class="btn btn-sm btn-primary btn-icon ml-2">
+                                                                                             <i class="fa fa-print"></i>
+                                                                                         </a>
+                                                                                     @elseif($lab->visit_status_timeline == 'Reporting')
+                                                                                         <a href='{{ route('print.labreport', $lab->service_visit_registration_id) }}'
+                                                                                             data-toggle="tooltip" data-placement="top" title="Print Result"
+                                                                                             target="_blank" class="btn btn-sm btn-primary btn-icon ml-2">
                                                                                             <i class="fa fa-print"></i>
                                                                                         </a>
                                                                                     @endif
